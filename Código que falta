@@ -1,0 +1,39 @@
+public Object desempilhaA() {
+    Object var = -1;
+    if(tamanhoA() == 0){
+      throw new IllegalArgumentException("Não é possível desempilharA");  
+    }else if(tamanhoA() == 1){
+      var = p[topoA];
+      qtdA--;
+    }else{
+      var = p[topoA];
+      topoA--;
+      qtdA--;
+    }
+    return var;
+  }
+  
+  public Object desempilhaB() {
+    Object var = -1;
+    if(tamanhoB() == 0){
+      throw new IllegalArgumentException("Não é possível desempilharB");  
+    }else if(tamanhoB() == 1){
+      var = p[topoB];
+      qtdB--;
+    }else{
+      var = p[topoB];
+      topoB++;
+      qtdB--;
+    }
+    return var;
+  }
+  
+  //TOPO
+  
+  public Object topoA() {
+    return (tamanhoA() > 0 ? p[topoA] : "Nenhum topo encontrado");
+  }
+  
+  public Object topoB() {
+    return (tamanhoB() > 0 ? p[topoB] : "Nenhum topo encontrado");
+  }

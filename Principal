@@ -4,7 +4,7 @@ public class Principal {
 	public static void main(String[] args) {
 		
 		Pilha p = new Pilha();
-		
+		try{
 		p.empilharA(10);
 		p.empilharA(20);
 		p.empilharA(30);
@@ -18,8 +18,6 @@ public class Principal {
 		p.empilharB(4);
 		
 		
-		p.vetor();
-		
 		System.out.println("A pilhaA está vazia? " + p.vaziaA());
 		System.out.println("Desempilha: " + p.desempilhaA());
 		System.out.println("Está cheia? " + p.cheiaA());
@@ -28,12 +26,17 @@ public class Principal {
 		System.out.println("Tamanho da pilhaA: " + p.tamanhoA());
 		
 		System.out.println("A pilhaB está vazia? " + p.vaziaB());
-	    System.out.println("Desempilha: " + p.desempilhaB());
+	        System.out.println("Desempilha: " + p.desempilhaB());
 		System.out.println("Está cheia? " + p.cheiaB());
 		System.out.println("TopoB: " + p.topoB());
 		p.mostrarPilhaB();
 		System.out.println("Tamanho da pilhaB: " + p.tamanhoB());
 		
+                 }catch (Exception e) {
+                  System.out.println(e.getMessage());
+                 }
+
+
 	}
 
 }
